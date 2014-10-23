@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # get 'projects/index'
   # get 'project/id', to: 'projects#show', as: "project"
 
-  resources :projects, except: [:new, :edit]
+  resources :projects, except: [:new, :edit] do
+    resources :cards, except: [:new, :edit, :show, :index]
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
