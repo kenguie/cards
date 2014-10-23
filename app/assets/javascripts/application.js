@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready page:load', function () {
+
+	//$(".nav").mousedown(function() {
+	$(".nav").on('ajax:success', function() {
+		$(this).closest(".card").fadeOut(500)
+	});
+
+	// .on('ajax:success', function() {  });
+});
+
