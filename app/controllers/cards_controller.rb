@@ -1,5 +1,15 @@
 class CardsController < ApplicationController
 
+	def sort
+		cards = params[:card]
+		cards.each.with_index do |card, index|
+			Card.find(card).update(position: (index + 1))
+		end
+		respond_to do |format|
+			format.js {head :no_content}
+		end
+	end
+
 	def create
 		@project = Project.find(params[:project_id])
 		@card = Card.create(title: "new card", body: "write something here...", project_id: @project.id)
@@ -33,5 +43,6 @@ class CardsController < ApplicationController
 			format.js { head :no_content }
 		end
 	end
+
 
 end

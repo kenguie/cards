@@ -29,9 +29,14 @@ $(document).on('ready page:load', function () {
 	
   		/* Activating Best In Place */
   		$(".best_in_place").best_in_place();
-  		
+
+  		//The card is not sortable, the board is!
   		$("#board").sortable({
-  			appendTo: $('#board')
+  			appendTo: $('#board'),
+  			update: function() {  //Once sorted, call post, and serialize it in the url
+  				$.post($(this).data('update-url'), 
+  					$(this).sortable('serialize'));
+  			}
   		});
 
 
