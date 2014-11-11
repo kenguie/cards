@@ -29,6 +29,7 @@ gem 'devise'
 gem 'best_in_place'
 gem 'jquery-ui-rails'
 gem 'quiet_assets'
+gem 'newrelic_rpm'
 #gem 'passenger'
 #gem 'pg'
 # Use ActiveModel has_secure_password
