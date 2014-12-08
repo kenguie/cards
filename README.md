@@ -1,9 +1,10 @@
 README
 
-# Tweeeter
+# index-card app
 
 ### Description
-Simple Twitter Clone
+Application to help organize information in index card form.
+Code along project with our instructor Brian Fountain.
 
 ### Set Up
 Pull down the repository:
