@@ -6,6 +6,8 @@ README
 Application to help organize information in index card form.
 Code along project with our instructor Brian Fountain.
 
+Gem of note: Best in Place - allows changes to be made and saved on the page.
+
 ### Set Up
 Pull down the repository:
 
